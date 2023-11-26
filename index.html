@@ -1,14 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Secret web lab </title>
+    <link rel="stylesheet" type="text/css" href="store.css">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Lab # 1</title>
+    <meta name="Magda Katerina">
+    <title>EGastronom</title>
+    <link rel="stylesheet" href="./mycss/store.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
 </head>
-<script src="js/myscript.js"></script>
 <body>
-    <h1 class="main"> Next </h1>
-    <p>  <b>  text </b></p>
+<header class="header">
+    <nav class="header-nav padding">
+        <a class="hover" href="">
+            <b>E</b>Gastronom
+        </a>
+        <div class="header-right padding">
+            <ul class="list">
+                <li><a class="hover" href="">Store</a></li>
+                <li><a class="hover" href="./news.html">News</a></li>
+                <li><a class="hover" href="./resume.html">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main class="main">
+    <div class="input">
+        <input class="padding" type="text" placeholder="Пошук...">
+        <i class="fi fi-rs-search search-logo"></i>
+        <button class="input-button"></button>
+    </div>
+    <hr>
+    <div class="main-div">
+        <aside class="left">
+            <div class="sidebar">
+                <span>Меню</span>
+                <ul class="left-list">
+                    <li class="hover">ПРОДУКТИ ХАРЧУВАННЯ</li>
+                    <li class="hover">МОЛОЧНА ПРОДУКЦІЯ</li>
+                </ul>
+            </div>
+            <div class="sidebar">
+                <span>Фільтри</span>
+                <div>
+                    <span>Ціна</span>
+                    <div class="">
+                        <input type="text" placeholder="від...">
+                        <input type="text" placeholder="до...">
+                        <i class="fi fi-rs-search search-logo"></i>
+                        <button></button>
+                    </div>
+                    <span>Наявність</span>
+                    <div>
+                        <input type="checkbox" style="width: 14px">
+                        <span>В наявності</span>
+                    </div>
+                    <span>Акція</span>
+                    <div>
+                        <input type="checkbox" style="width: 14px">
+                        <span>Товари зі знижками</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <span>Графік роботи</span>
+                <ul class="left-list">
+                    <li style="display:flex; justify-content: space-between"><span>Понеділок</span> <span>9:00 - 17:00</span></li>
+                    <li style="display:flex; justify-content: space-between"><span>Вівторок</span> <span>9:00 - 17:00</span></li>
+                    <li style="display:flex; justify-content: space-between"><span>Середа</span> <span>9:00 - 17:00</span></li>
+                    <li style="display:flex; justify-content: space-between"><span>Четвер</span> <span>9:00 - 17:00</span></li>
+                    <li style="display:flex; justify-content: space-between"><span>П'ятниця</span> <span>9:00 - 17:00</span></li>
+                    <li style="display:flex; justify-content: space-between"><span>Субота</span> <span>10:00 - 15:00</span></li>
+                    <li style="display:flex; justify-content: space-between"><span>Неділя</span> <span>10:00 - 15:00</span></li>
+                </ul>
+            </div>
+        </aside>
+        <div class="right">
+            <div class="right-page">
+                <h1>МОЛОЧНІ ПРОДУКТИ</h1>
+                <div>
+                    <p class="right-page_text">Необхідною складовою споживчого кошика є молочні вироби. Молоко та молочна продукція містить поживні речовини, що є цінними для здоров’я та хорошого самопочуття людини. Збалансоване харчування включає продукти, котрі забезпечують організм мінералами: кальцієм та фосфором, синтезують вітаміни В2, В12, А, D та постачають в організм білок. У нас можна замовити якісні та свіжі молочні продукти від світових виробників, що відповідають міжнародним стандартам якості.</p>
+                    <p class="right-page_text">Молочні вироби є смачною складовою раціону. Їх можна використовувати як складову у приготуванні страв або ж вживати як самостійний продукт. Сир та масло прекрасно наситять, а вершки та молоко додадуть смаку улюбленому напою.</p>
+                </div>
+            </div>
+            <div class="right-group">
+                <div class="right-group-div box-hover">
+                    <img class="right-group-img" src="https://images.prom.ua/2772281952_w238_h238_vershki.jpg" alt="">
+                    <span class="right-group-text">Вершки</span>
+                </div>
+                <div class="right-group-div box-hover">
+                    <img class="right-group-img" src="https://images.prom.ua/2772290115_w238_h238_maslo.jpg" alt="">
+                    <span class="right-group-text">Масло</span>
+                </div>
+                <div class="right-group-div box-hover">
+                    <img class="right-group-img" src="https://images.prom.ua/2772301130_w238_h238_siri.jpg" alt="">
+                    <span class="right-group-text">Сири</span>
+                </div>
+                <div class="right-group-div box-hover">
+                    <img class="right-group-img" src="https://images.prom.ua/2772306154_w238_h238_moloko.jpg" alt="">
+                    <span class="right-group-text">Молоко</span>
+                </div>
+                <div class="right-group-div box-hover">
+                    <img class="right-group-img" src="https://images.prom.ua/2772342049_w238_h238_jogurti.jpg" alt="">
+                    <span class="right-group-text">Йогурти</span>
+                </div>
+            </div>
+            <div class="right-gallery">
+                <div class="right-card box-hover">
+                    <img src="https://images.prom.ua/2940244242_w327_h245_vershki-30-mlekovita.jpg" alt="">
+                    <h1>Вершки 30% Млековіта Mlekovita 500ml 6шт/ящ</h1>
+                    <h2>104 ₴.</h2>
+                    <button class="hover">Купити</button>
+                </div>
+                <div class="right-card box-hover">
+                    <img src="	https://images.prom.ua/2940244243_w327_h245_vershki-36-mlekovita.jpg" alt="">
+                    <h1>Вершки 36% Млековіта Mlekovita 1L 12шт/ящ</h1>
+                    <h2>174,46 ₴.</h2>
+                    <button class="hover">Купити</button>
+                </div>
+                <div class="right-card box-hover">
+                    <img src="https://images.prom.ua/4692243541_w327_h245_sous-beshamel-sterilgarda.jpg" alt="">
+                    <h1>Соус бешамель Стерілгарда Sterilgarda 500ml 12шт/ящ</h1>
+                    <h2>96,84 ₴.</h2>
+                    <button class="hover">Купити</button>
+                </div>
+                <div class="right-card box-hover">
+                    <img src="https://images.prom.ua/3926559610_w327_h245_puding-z-vanilnim.jpg" alt="">
+                    <h1>Пудинг ваніль Емікс Emix with vanilla 40g 30шт/ящ</h1>
+                    <h2>9,06 ₴.</h2>
+                    <button class="hover">Купити</button>
+                </div>
+                <div class="right-card box-hover">
+                    <img src="https://images.prom.ua/4776584517_w327_h245_sir-feta-fellada.jpg  " alt="">
+                    <h1>Сир фета феллада салатний 45% Ловіч Lowicz fellada salatkowa 270g 18шт/ящ</h1>
+                    <h2>52,35 ₴.</h2>
+                    <button class="hover">Купити</button>
+                </div>
+                <div class="right-card box-hover">
+                    <img src="https://images.prom.ua/2940692236_w327_h245_maslo-ekstra-latsiata.jpg" alt="">
+                    <h1>Масло екстра Лаціата Laciate 500g 10шт/ящ (Код: 00-00004961)</h1>
+                    <h2>151,28 ₴.</h2>
+                    <button class="hover">Купити</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <h6>EGastronom</h6>
+</footer>
 </body>
 </html>

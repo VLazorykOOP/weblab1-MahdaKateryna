@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  font-style: normal;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  margin: 0;
+  background-color: #0e0e0e;
+  color: #ccc;
+}
+.header-padding {
+  padding: 4px 8px;
+}
+.hover:hover {
+  background-color: #f3e3a4;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: rgb(243, 201, 68);
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  z-index: 2;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+}
+.header-nav a {
+  text-decoration: none;
+  padding: 8px 16px;
+  letter-spacing: 4px;
+  color: black;
+}
+.header-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+.main {
+  padding: 3.7% 3% 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  width: 32%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #262626;
+}
+.right {
+  width: 68%;
+  display: flex;
+  flex-flow: column wrap;
+  margin-left: 16px;
+}
+.left-img {
+  background-image: url("https://www.w3schools.com/w3images/avatar_hat.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  filter: grayscale(75%);
+}
+.left-h {
+  align-self: flex-end;
+  font-size: 30px;
+  margin: 10px 16px;
+  font-weight: normal;
+  color: black;
+}
+.left-text {
+  padding: 0 16px;
+  color: #f3e3a4;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+.p-large {
+  font-size: 18px;
+  margin: 18px 0;
+}
+.icons {
+  font-size: 1.2em !important;
+  margin: 0 8px 0 0;
+  color: #f3c944 !important;
+}
+.div-light-grey {
+  background-color: #f3e3a4;
+  border-radius: 15px;
+}
+.div-round {
+  background-color: #f3c944;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 13px;
+  padding: 2px 0;
+  color: black;
+}
+.right-top {
+  padding: 10px 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 16px;
+  background-color: #262626;
+}
+.right-h {
+  font-size: 30px;
+  font-weight: normal;
+  margin: 15px 0 33px 0;
+}
+.right-top-text {
+  padding: 0 16px;
+}
+h5 {
+  font-size: 18px;
+  margin: 20px 0;
+}
+h6 {
+  font-size: 16px;
+  margin: 20px 0;
+  font-weight: 300;
+}
+.h6-icon {
+  margin: 0 16px 0 0;
+  font-size: 1.3em;
+  color: #f3c944;
+}
+span {
+  background-color: #f3c944;
+  color: black;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 300;
+}
+.right-top-text p {
+  margin: 16px 0;
+}
+.right-bot {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 10px 16px;
+  background-color: #262626;
+}
+.footer-hover:hover {
+  opacity: 0.6;
+}
+.footer {
+  background-color: #f3c944;
+  padding: 1px 0 10px;
+  text-align: center;
+  font-size: 17px;
+  color: black;
+}
