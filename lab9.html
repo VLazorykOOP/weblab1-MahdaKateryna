@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="Author" content="Гаштемеленко Яваскриптик Перлович">
+    <meta name="Description" content="Приклади Web-сторiнок. HTML Reference.">
+    <meta name="Keywords" content="Web-сторiнка, audio, video">
+    <title>Приклад. Сторінка audio та video</title>
+    <script>
+        function setAudio() {
+            var audioSelect = document.getElementById("audioSelect");
+            var audioPlayer = document.getElementById("audioPlayer");
+            audioPlayer.src = "audio/" + audioSelect.value;
+            audioPlayer.play();
+        }
+
+        function setVideo() {
+            var videoSelect = document.getElementById("videoSelect");
+            var videoPlayer = document.getElementById("videoPlayer");
+            videoPlayer.src = "video/" + videoSelect.value;
+            videoPlayer.play();
+        }
+
+        function checkVideoSupport() {
+            if (!!document.createElement('video').canPlayType) {
+                var vidTest = document.createElement("video");
+                var oggTest = vidTest.canPlayType('video/ogg; codecs="theora, vorbis"');
+                var h264Test = vidTest.canPlayType('video/mp4; codecs="avc1.42E01E, mp4a.40.2"');
+
+                if (!oggTest && !h264Test) {
+                    document.getElementById("checkVideoResult").innerHTML = "Ваш браузер не підтримує відео.";
+                } else {
+                    document.getElementById("checkVideoResult").innerHTML = "Ваш браузер підтримує відео.";
+                }
+            } else {
+                document.getElementById("checkVideoResult").innerHTML = "Ваш браузер не підтримує відео.";
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>Лабораторна робота №9</h2>
+<br>
+
+<div>
+    <h3>Бібліотека audio</h3>
+    <form>
+        <select id="audioSelect" onchange="setAudio()">
+            <option value="UUT.mp3" selected>Юлія Бодай. Вітер</option>
+            <option value="CCK.mp3">Скрябін; Сам собі країна CCK</option>
+            <option value="Hay.mp3">Скрябін; Хай буде так як хочеш ти</option>
+            <option value="MV.mp3">Фіолет. Мій вибір</option>
+        </select>
+    </form>
+    <br>
+    <audio id="audioPlayer" controls autoplay loop>
+        <source src="audio/UUT.mp3" type="audio/mp3">
+        Ваш браузер не підтримує аудіо.
+    </audio>
+</div>
+
+<hr>
+
+<div>
+    <h3>Бібліотека video</h3>
+    <form>
+        <select id="videoSelect" onchange="setVideo()">
+            <option value="video1.mp4" selected>Киця</option>
+            <option value="test3.mp4">Hary</option>
+            <option value="test2.mp4">What do you see</option>
+            <option value="test4.mp4">EE - I - EE - I-O</option>
+            <option value="v_shkolu.webm">Чебурашка</option>
+        </select>
+    </form>
+    <br>
+    <video id="videoPlayer" tabindex="0" controls poster="video/test.jpg">
+        <source src="video1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        <source src="video/test.ogv" type='video/ogg; codecs="theora, vorbis"'>
+        <source src="video/test.webm" type='video/webm; codecs="vp8, vorbis"'>
+        Ваш браузер не підтримує відео.
+        <a href="video/test.mp4">Скачайте відео</a>.
+    </video>
+    <br>
+</div>
+
+<br>
+
+<div>
+    <h3>Перевірка підтримки відео</h3>
+    <div id="checkVideoResult">
+        <button onclick="checkVideoSupport()">Перевірка</button>
+    </div>
+</div>
+</body>
+</html>

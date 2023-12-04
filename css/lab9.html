@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="Author" content="Гаштемеленко Яваскриптик Перлович">
+    <meta name="Description" content="Приклади Web-сторiнок. HTML Reference.">
+    <meta name="Keywords" content="Web-сторiнка, audio, video">
+    <title>Приклад. Сторінка audio та video</title>
+    <script>
+        function setAudio() {
+            var audioSelect = document.getElementById("audioSelect");
+            var audioPlayer = document.getElementById("audioPlayer");
+            audioPlayer.src = "audio/" + audioSelect.value;
+            audioPlayer.play();
+        }
+
+        function setVideo() {
+            var videoSelect = document.getElementById("videoSelect");
+            var videoPlayer = document.getElementById("videoPlayer");
+            videoPlayer.src = "video/" + videoSelect.value;
+            videoPlayer.play();
+        }
+
+        function checkVideoSupport() {
+            if (!!document.createElement('video').canPlayType) {
+                var vidTest = document.createElement("video");
+                var oggTest = vidTest.canPlayType('video/ogg; codecs="theora, vorbis"');
+                var h264Test = vidTest.canPlayType('video/mp4; codecs="avc1.42E01E, mp4a.40.2"');
+
+                if (!oggTest && !h264Test) {
+                    document.getElementById("checkVideoResult").innerHTML = "Ваш браузер не підтримує відео.";
+                } else {
+                    document.getElementById("checkVideoResult").innerHTML = "Ваш браузер підтримує відео.";
+                }
+            } else {
+                document.getElementById("checkVideoResult").innerHTML = "Ваш браузер не підтримує відео.";
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>Лабораторна робота №9</h2>
+
+
+<div>
+    <h3>Бібліотека audio</h3>
+    <form>
+        <select id="audioSelect" onchange="setAudio()">
+            <option value="audio1.mp3" selected>Пісня 1</option>
+            <option value="audio2.mp3">Пісня 2</option>
+        </select>
+    </form>
+
+    <audio id="audioPlayer" controls autoplay loop>
+        <source src="audio/audio1.mp3" type="audio/mp3">
+        <source src="audio/audio2.mp3" type="audio/mp3">
+        Ваш браузер не підтримує аудіо.
+    </audio>
+</div>
+
+
+<div>
+    <h3>Бібліотека video</h3>
+    <form>
+        <select id="videoSelect" onchange="setVideo()">
+            <option value="video1.mp4" selected>Відео 1</option>
+            <option value="video2.mp4">Відео 2</option>
+        </select>
+    </form>
+
+    <video id="videoPlayer" tabindex="0" controls poster="video/video.jpg">
+        <source src="video/video1.mp4" type='video/mp4'>
+        <source src="video/video2.mp4" type='video/mp4'>
+        Ваш браузер не підтримує відео.
+    </video>
+
+</div>
+
+
+<div>
+    <h3>Перевірка підтримки відео</h3>
+    <div id="checkVideoResult">
+        <button onclick="checkVideoSupport()">Перевірка</button>
+    </div>
+</div>
+</body>
+</html>
